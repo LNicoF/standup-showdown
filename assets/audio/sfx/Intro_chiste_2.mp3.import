@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Intro_chiste_2.mp3-293b9714e132f54f1765707f420deaa9.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Intro_chiste_2.mp3"
+dest_files=[ "res://.import/Intro_chiste_2.mp3-293b9714e132f54f1765707f420deaa9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

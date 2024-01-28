@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/desarrollo_chiste_2.mp3-62608b979f41b8e9b35ab5615a406f04.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/desarrollo_chiste_2.mp3"
+dest_files=[ "res://.import/desarrollo_chiste_2.mp3-62608b979f41b8e9b35ab5615a406f04.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

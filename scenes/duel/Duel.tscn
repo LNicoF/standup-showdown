@@ -1,0 +1,184 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://scenes/dialog_picker/DialogPicker.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/dialog_writer/DialogWriter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/duel/Duel.gd" type="Script" id=3]
+[ext_resource path="res://scenes/duel/Player.gd" type="Script" id=4]
+[ext_resource path="res://assets/images/bg.png" type="Texture" id=5]
+[ext_resource path="res://assets/audio/bgm/duelo_bgm.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/images/sprites/sir_john.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/sprites/meathead.png" type="Texture" id=8]
+[ext_resource path="res://scenes/duel/OptionsSelector.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/images/sprites/Crying-Face-Emoji.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/sprites/happy face.webp" type="Texture" id=11]
+[ext_resource path="res://assets/images/sprites/joke container.png" type="Texture" id=12]
+[ext_resource path="res://theme_intro.tres" type="Theme" id=13]
+[ext_resource path="res://assets/audio/sfx/SFX_Selection.mp3" type="AudioStream" id=14]
+[ext_resource path="res://assets/audio/sfx/Intro_chiste_2.mp3" type="AudioStream" id=15]
+[ext_resource path="res://assets/audio/sfx/desarrollo_2_chiste_1.mp3" type="AudioStream" id=16]
+[ext_resource path="res://assets/audio/sfx/remate_chiste_2.mp3" type="AudioStream" id=17]
+[ext_resource path="res://assets/audio/sfx/desarrollo_chiste_2.mp3" type="AudioStream" id=18]
+[ext_resource path="res://assets/audio/sfx/intro_chiste_1.mp3" type="AudioStream" id=19]
+[ext_resource path="res://assets/audio/sfx/Remate_chiste_1.mp3" type="AudioStream" id=20]
+[ext_resource path="res://assets/audio/sfx/buuuu.mp3" type="AudioStream" id=21]
+[ext_resource path="res://assets/audio/sfx/risas.mp3" type="AudioStream" id=22]
+
+[node name="Duel" type="Node"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 313.0, 571.0 ]
+}
+
+[node name="Bg" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player1" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Character" type="Sprite" parent="Player1"]
+position = Vector2( 403, 439 )
+scale = Vector2( 0.4107, 0.4107 )
+texture = ExtResource( 8 )
+
+[node name="LoseSprite" type="Sprite" parent="Player1/Character"]
+visible = false
+position = Vector2( 32.1404, -386.657 )
+scale = Vector2( 0.389579, 0.389579 )
+texture = ExtResource( 10 )
+
+[node name="WinSprite" type="Sprite" parent="Player1/Character"]
+visible = false
+position = Vector2( 32.1404, -386.657 )
+scale = Vector2( 0.517409, 0.517409 )
+texture = ExtResource( 11 )
+
+[node name="DialogPicker" parent="Player1" instance=ExtResource( 1 )]
+margin_left = 28.0
+margin_top = -673.0
+margin_right = 368.0
+margin_bottom = -431.0
+rect_pivot_offset = Vector2( 286, 85 )
+theme = ExtResource( 13 )
+
+[node name="JokeContainer" type="Sprite" parent="Player1"]
+position = Vector2( 161.44, 441.5 )
+scale = Vector2( 0.177641, 0.177641 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="IntroWriter" parent="Player1" instance=ExtResource( 2 )]
+position = Vector2( 20, 358 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DevelopementWriter" parent="Player1" instance=ExtResource( 2 )]
+position = Vector2( 20, 442 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PunchlineWriter" parent="Player1" instance=ExtResource( 2 )]
+position = Vector2( 20, 524 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="IntroSound" type="AudioStreamPlayer" parent="Player1"]
+stream = ExtResource( 19 )
+
+[node name="DevSound" type="AudioStreamPlayer" parent="Player1"]
+stream = ExtResource( 16 )
+
+[node name="PlineSound" type="AudioStreamPlayer" parent="Player1"]
+stream = ExtResource( 20 )
+
+[node name="Player2" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Character" type="Sprite" parent="Player2"]
+position = Vector2( 890, 433 )
+scale = Vector2( 0.484818, 0.484818 )
+texture = ExtResource( 7 )
+
+[node name="LoseSprite" type="Sprite" parent="Player2/Character"]
+visible = false
+position = Vector2( -34.6523, -315.17 )
+scale = Vector2( 0.330021, 0.330021 )
+texture = ExtResource( 10 )
+
+[node name="WinSprite" type="Sprite" parent="Player2/Character"]
+visible = false
+position = Vector2( -34.6523, -315.17 )
+scale = Vector2( 0.438309, 0.438309 )
+texture = ExtResource( 11 )
+
+[node name="DialogPicker" parent="Player2" instance=ExtResource( 1 )]
+margin_left = 907.0
+margin_top = -673.0
+margin_right = 1247.0
+margin_bottom = -431.0
+theme = ExtResource( 13 )
+theme_type_variation = "v2"
+__meta__ = {
+"_edit_horizontal_guides_": [ 600.0 ],
+"_edit_vertical_guides_": [ 1024.0 ],
+"_editor_description_": ""
+}
+
+[node name="JokeContainer" type="Sprite" parent="Player2"]
+position = Vector2( 1120, 442 )
+scale = Vector2( 0.177641, 0.177641 )
+texture = ExtResource( 12 )
+
+[node name="IntroWriter" parent="Player2" instance=ExtResource( 2 )]
+position = Vector2( 980, 358 )
+
+[node name="DevelopementWriter" parent="Player2" instance=ExtResource( 2 )]
+position = Vector2( 980, 442 )
+
+[node name="PunchlineWriter" parent="Player2" instance=ExtResource( 2 )]
+position = Vector2( 980, 524 )
+
+[node name="IntroSound" type="AudioStreamPlayer" parent="Player2"]
+stream = ExtResource( 15 )
+
+[node name="DevSound" type="AudioStreamPlayer" parent="Player2"]
+stream = ExtResource( 18 )
+
+[node name="PlineSound" type="AudioStreamPlayer" parent="Player2"]
+stream = ExtResource( 17 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -5.0
+autoplay = true
+
+[node name="OptionsSelector" parent="." instance=ExtResource( 9 )]
+
+[node name="SelectAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="WinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+
+[connection signal="jokeAssembled" from="Player1" to="." method="_on_Player1_jokeAssembled"]
+[connection signal="pickedOption" from="Player1/DialogPicker" to="Player1" method="_on_DialogPicker_pickedOption"]
+[connection signal="finishedWriting" from="Player1/IntroWriter" to="Player1" method="_on_IntroWriter_finishedWriting"]
+[connection signal="finishedWriting" from="Player1/DevelopementWriter" to="Player1" method="_on_DevelopementWriter_finishedWriting"]
+[connection signal="finishedWriting" from="Player1/PunchlineWriter" to="Player1" method="_on_PunchlineWriter_finishedWriting"]
+[connection signal="jokeAssembled" from="Player2" to="." method="_on_Player2_jokeAssembled"]
+[connection signal="pickedOption" from="Player2/DialogPicker" to="Player2" method="_on_DialogPicker_pickedOption"]
+[connection signal="finishedWriting" from="Player2/IntroWriter" to="Player2" method="_on_IntroWriter_finishedWriting"]
+[connection signal="finishedWriting" from="Player2/DevelopementWriter" to="Player2" method="_on_DevelopementWriter_finishedWriting"]
+[connection signal="finished" from="Player2/PlineSound" to="Player2" method="_on_PlineSound_finished"]
+[connection signal="finishedProcessing" from="OptionsSelector" to="." method="_on_OptionsSelector_finishedProcessing"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/risas.mp3-82f29bf2dd5950951d24128a8fd418d2.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/risas.mp3"
+dest_files=[ "res://.import/risas.mp3-82f29bf2dd5950951d24128a8fd418d2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

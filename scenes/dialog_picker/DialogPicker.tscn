@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/dialog_picker/DialogPicker.gd" type="Script" id=2]
+
+[node name="DialogPicker" type="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -279.0
+margin_right = 232.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 600.0 ],
+"_edit_vertical_guides_": [ 1024.0 ]
+}
+
+[node name="Options" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 2
+__meta__ = {
+"_edit_lock_": true
+}
